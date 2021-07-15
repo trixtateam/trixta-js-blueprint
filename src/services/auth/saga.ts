@@ -41,6 +41,22 @@ export function* loginSuccessSaga({ data, additionalData }: LoginSucessAction) {
 }
 
 export function* loginSaga({ payload }: LoginAction) {
+  // if we specify another domain than the default process.env.REACT_APP_TRIXTA_DOMAIN
+  if (payload.domainUrl) {
+    yield put(
+      connectPhoenix({
+        domainUrl: payload.domainUrl,
+        params: {},
+      }),
+    );
+    yield put(
+      getPhoenixChannel({
+        domainUrl: payload.domainUrl,
+        channelTopic: TrixtaRoles.SESSION,
+      }),
+    );
+  }
+
   yield put(
     pushToPhoenixChannel({
       channelTopic: TrixtaRoles.SESSION,
@@ -80,12 +96,14 @@ export function* connectPhoenixWithAuth({
       }),
     );
   }
-  yield put(
-    getPhoenixChannel({
-      domainUrl,
-      channelTopic: TrixtaRoles.SESSION,
-    }),
-  );
+  if (domainUrl) {
+    yield put(
+      getPhoenixChannel({
+        domainUrl,
+        channelTopic: TrixtaRoles.SESSION,
+      }),
+    );
+  }
 }
 
 export default function* authSaga() {

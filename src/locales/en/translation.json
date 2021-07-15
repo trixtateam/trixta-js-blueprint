@@ -18,6 +18,10 @@
     "metaTitle": "Trixta Action Page",
     "metaDescription": "Trixta Action Page"
   },
+  "trixtaReactionPage": {
+    "metaTitle": "Trixta Reaction Page",
+    "metaDescription": "Trixta Reaction Page"
+  },
   "routingFeature": {
     "title": "Industry-standard Routing",
     "description": "It's natural to want to add pages (e.g. `/about`) to your application, and routing makes this possible."
