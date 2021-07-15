@@ -18,7 +18,14 @@ interface Props {}
 export function TrixtaActionPage(props: Props) {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t, i18n } = useTranslation();
-  const { debugMode, setDebugMode, selectedActionName } = useTrixtaExample({
+  const {
+    debugMode,
+    setDebugMode,
+    selectedActionName,
+    actionList,
+    roles,
+    selectedRoleName,
+  } = useTrixtaExample({
     debug: false,
   });
   return (
@@ -33,7 +40,7 @@ export function TrixtaActionPage(props: Props) {
       <TrixtaNavBar />
       <PageWrapper>
         <DebugModeSwitch debugMode={debugMode} setDebugMode={setDebugMode} />
-        {selectedActionName}
+        {roles[1]}
       </PageWrapper>
     </>
   );
