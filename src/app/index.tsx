@@ -12,7 +12,9 @@ import { useTranslation } from 'react-i18next';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { SagaInjectionModes, useInjectSaga } from 'redux-injectors';
 import { routes } from '../constants/routes';
+import TrixtaRoles from '../constants/TrixtaRole';
 import { GlobalStyle } from '../styles/global-styles';
+import ProtectedRoute from './components/Route/components/ProtectedRoute';
 import { HomePage } from './pages/HomePage/Loadable';
 import { LoginPage } from './pages/LoginPage/Loadable';
 import { NotFoundPage } from './pages/NotFoundPage/Loadable';
@@ -55,8 +57,9 @@ export function App() {
           path={process.env.PUBLIC_URL + routes.TRIXTA_ACTION_PAGE}
           component={TrixtaActionPage}
         />
-        <Route
+        <ProtectedRoute
           exact
+          roles={[TrixtaRoles.EXAMPLES]}
           path={process.env.PUBLIC_URL + routes.TRIXTA_EXAMPLES_PAGE}
           component={TrixtaExamplesPage}
         />
