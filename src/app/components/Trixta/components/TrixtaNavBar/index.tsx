@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 import { TrixtaLogo } from './TrixtaLogo';
 import { StyleConstants } from 'styles/StyleConstants';
 import { Nav } from './TrixtaNav';
-import { PageWrapper } from '../PageWrapper';
+import { PageWrapper } from '../../../PageWrapper';
 
 export function TrixtaNavBar() {
   return (

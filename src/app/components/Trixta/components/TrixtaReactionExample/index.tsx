@@ -1,6 +1,6 @@
 /**
  *
- * TrixtaActionExample
+ * TrixtaReactionExample
  *
  */
 import {
@@ -12,9 +12,10 @@ import {
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components/macro';
-import { Button } from '../../../../components/Button';
-import { JsonViewer } from '../../../../components/JsonViewer';
-import { LoadingIndicator } from '../../../../components/LoadingIndicator';
+import { Button } from '../../../Button';
+import { JsonViewer } from '../../../JsonViewer';
+import { LoadingIndicator } from '../../../LoadingIndicator';
+import { Title } from '../../../Title/Title';
 
 interface Props extends TrixtaReactionBaseProps {
   debugMode: boolean;
@@ -25,10 +26,12 @@ export const TrixtaReactionExample = memo((props: Props) => {
   const { t, i18n } = useTranslation();
   const { roleName, debugMode, reactionName, requestForEffect } = props;
 
-  if (!roleName || !reactionName) return <>Please select a role and reaction</>;
+  if (!roleName || !reactionName)
+    return <Title>Please select a role and reaction</Title>;
 
   return (
     <>
+      <Title>Component Example</Title>
       <Button
         onClick={() => clearTrixtaReactionResponse({ roleName, reactionName })}
       >

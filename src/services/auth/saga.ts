@@ -96,14 +96,14 @@ export function* connectPhoenixWithAuth({
       }),
     );
   }
-  if (domainUrl) {
-    yield put(
-      getPhoenixChannel({
-        domainUrl,
-        channelTopic: TrixtaRoles.SESSION,
-      }),
-    );
-  }
+  // if (domainUrl) {
+  //   yield put(
+  //     getPhoenixChannel({
+  //       domainUrl,
+  //       channelTopic: TrixtaRoles.SESSION,
+  //     }),
+  //   );
+  // }
 }
 
 export default function* authSaga() {

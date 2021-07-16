@@ -17,8 +17,9 @@ import { HomePage } from './pages/HomePage/Loadable';
 import { LoginPage } from './pages/LoginPage/Loadable';
 import { NotFoundPage } from './pages/NotFoundPage/Loadable';
 import { TrixtaActionPage } from './pages/TrixtaActionPage/Loadable';
-import { TrixtaReactionPage } from './pages/TrixtaReactionPage/Loadable';
+import { TrixtaExamplesPage } from './pages/TrixtaExamplesPage/Loadable';
 import { TrixtaPage } from './pages/TrixtaPage/Loadable';
+import { TrixtaReactionPage } from './pages/TrixtaReactionPage/Loadable';
 import saga from './saga';
 
 export function App() {
@@ -53,6 +54,11 @@ export function App() {
           exact
           path={process.env.PUBLIC_URL + routes.TRIXTA_ACTION_PAGE}
           component={TrixtaActionPage}
+        />
+        <Route
+          exact
+          path={process.env.PUBLIC_URL + routes.TRIXTA_EXAMPLES_PAGE}
+          component={TrixtaExamplesPage}
         />
         <Route
           exact

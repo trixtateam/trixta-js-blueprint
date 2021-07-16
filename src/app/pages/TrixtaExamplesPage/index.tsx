@@ -1,6 +1,6 @@
 /**
  *
- * TrixtaActionPage
+ * TrixtaExamplesPage
  *
  */
 import * as React from 'react';
@@ -10,24 +10,22 @@ import styled from 'styled-components/macro';
 import { useTrixtaExample } from '../../../hooks/useTrixtaExample';
 import { PageWrapper } from '../../components/PageWrapper';
 import { DebugModeSwitch } from '../../components/Trixta/components/DebugModeSwitch';
+import { TrixtaActionExample } from '../../components/Trixta/components/TrixtaActionExample';
+import { TrixtaActionHookExample } from '../../components/Trixta/components/TrixtaActionHookExample';
 import { TrixtaNavBar } from '../../components/Trixta/components/TrixtaNavBar';
-import { TrixtaReactionExample } from '../../components/Trixta/components/TrixtaReactionExample';
-import { TrixtaReactionHookExample } from '../../components/Trixta/components/TrixtaReactionHookExample';
 import { messages } from './messages';
+
 
 interface Props {}
 
-export function TrixtaReactionPage(props: Props) {
+export function TrixtaExamplesPage(props: Props) {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t, i18n } = useTranslation();
-  const {
-    debugMode,
-    setDebugMode,
-    selectedRoleName,
-    selectedReactionName,
-  } = useTrixtaExample({
+  const { debugMode, setDebugMode } = useTrixtaExample({
     debug: false,
   });
+  const roleName = 'examples';
+  const actionName = 'examples';
   return (
     <>
       <Helmet>
@@ -40,22 +38,16 @@ export function TrixtaReactionPage(props: Props) {
       <TrixtaNavBar />
       <PageWrapper>
         <DebugModeSwitch debugMode={debugMode} setDebugMode={setDebugMode} />
-        {/* //TODO dropdown {selectedRoleName} drop */}
-        {/* //TODO dropdown {selectedReactionName} drop */}
-        {selectedRoleName && selectedReactionName && (
-          <TrixtaReactionExample
-            roleName={selectedRoleName}
-            reactionName={selectedReactionName}
-            debugMode={debugMode}
-          />
-        )}
-        {selectedRoleName && selectedReactionName && (
-          <TrixtaReactionHookExample
-            roleName={selectedRoleName}
-            reactionName={selectedReactionName}
-            debugMode={debugMode}
-          />
-        )}
+        <TrixtaActionExample
+          roleName={roleName}
+          actionName={actionName}
+          debugMode={debugMode}
+        />
+        <TrixtaActionHookExample
+          roleName={roleName}
+          actionName={actionName}
+          debugMode={debugMode}
+        />
       </PageWrapper>
     </>
   );

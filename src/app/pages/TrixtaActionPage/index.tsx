@@ -9,11 +9,11 @@ import { useTranslation } from 'react-i18next';
 import styled from 'styled-components/macro';
 import { useTrixtaExample } from '../../../hooks/useTrixtaExample';
 import { PageWrapper } from '../../components/PageWrapper';
-import { TrixtaNavBar } from '../../components/TrixtaNavBar';
-import { DebugModeSwitch } from '../TrixtaPage/DebugModeSwitch';
-import { TrixtaActionExample } from './components/TrixtaActionExample';
-import { TrixtaActionHookExample } from './components/TrixtaActionHookExample';
+import { TrixtaNavBar } from '../../components/Trixta/components/TrixtaNavBar';
+import { TrixtaActionExample } from '../../components/Trixta/components/TrixtaActionExample';
+import { TrixtaActionHookExample } from '../../components/Trixta/components/TrixtaActionHookExample';
 import { messages } from './messages';
+import { DebugModeSwitch } from '../../components/Trixta/components/DebugModeSwitch';
 
 interface Props {}
 
@@ -42,6 +42,7 @@ export function TrixtaActionPage(props: Props) {
       <TrixtaNavBar />
       <PageWrapper>
         <DebugModeSwitch debugMode={debugMode} setDebugMode={setDebugMode} />
+        {roles[0]}
         {/* //TODO dropdown {selectedRoleName} drop */}
         {/* //TODO dropdown {selectedActionName} drop */}
         {/* //TODO dropdown {selectedRoleName} drop */}

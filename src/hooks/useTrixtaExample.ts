@@ -40,6 +40,7 @@ export const useTrixtaExample = ({ debug = false }: UseTrixtaExampleProps) => {
   const roles = useSelector<{ trixta: TrixtaState }, string[]>(state =>
     selectTrixtaRoles(state),
   );
+  console.info(roles);
   const selectTrixtaActions: any = useMemo(makeSelectTrixtaActionsForRole, []);
   const actions = useSelector<{ trixta: TrixtaState }, TrixtaAction[]>(state =>
     selectTrixtaActions(state, { roleName: selectedRoleName }),

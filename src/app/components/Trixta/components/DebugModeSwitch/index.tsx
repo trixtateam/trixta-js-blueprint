@@ -2,11 +2,10 @@ import { FormLabel } from 'app/components/FormLabel';
 import { Radio } from 'app/components/Radio';
 import * as React from 'react';
 import styled from 'styled-components/macro';
-import { UseTrixtaExampleResponse } from '../../../../hooks/useTrixtaExample';
 
 export type Props = {
-  debugMode: UseTrixtaExampleResponse['debugMode'];
-  setDebugMode: UseTrixtaExampleResponse['setDebugMode'];
+  debugMode: boolean;
+  setDebugMode: (debugMode: boolean) => void;
 };
 
 export function DebugModeSwitch({ debugMode, setDebugMode }: Props) {

@@ -1,6 +1,6 @@
 /**
  *
- * TrixtaActionHookExample
+ * TrixtaReactionHookExample
  *
  */
 import { TrixtaReactionBaseProps, useTrixtaReaction } from '@trixta/trixta-js';
@@ -10,6 +10,7 @@ import styled from 'styled-components/macro';
 import { Button } from '../../../../components/Button';
 import { JsonViewer } from '../../../../components/JsonViewer';
 import { LoadingIndicator } from '../../../../components/LoadingIndicator';
+import { Title } from '../../../Title/Title';
 
 interface Props extends TrixtaReactionBaseProps {
   debugMode: boolean;
@@ -32,10 +33,12 @@ export const TrixtaReactionHookExample = memo((props: Props) => {
     debugMode,
     requestForEffect,
   });
-  if (!roleName || !reactionName) return <>Please select a role and reaction</>;
+  if (!roleName || !reactionName)
+    return <Title>Please select a role and reaction</Title>;
 
   return (
     <>
+      <Title>Using Hook Example</Title>
       <Button onClick={() => clearReactionResponses()}>Clear Response</Button>
       <Div>
         <Div>

@@ -1,8 +1,8 @@
 import { ItemLink } from 'app/components/Link';
 import * as React from 'react';
 import styled from 'styled-components/macro';
-import { routes } from '../../../constants/routes';
-import { LoginButton } from '../LoginButton';
+import { routes } from '../../../../../constants/routes';
+import { LoginButton } from '../../../LoginButton';
 import { ReactComponent as DocumentationIcon } from './assets/documentation-icon.svg';
 import { ReactComponent as GithubIcon } from './assets/github-icon.svg';
 export function Nav() {
@@ -28,10 +28,13 @@ export function Nav() {
       </Item>
       <ItemLink to={process.env.PUBLIC_URL + routes.HOME_PAGE}>Home</ItemLink>
       <ItemLink to={process.env.PUBLIC_URL + routes.TRIXTA_ACTION_PAGE}>
-        Trixta Action
+        Action
       </ItemLink>
       <ItemLink to={process.env.PUBLIC_URL + routes.TRIXTA_REACTION_PAGE}>
-        Trixta Reaction
+        Reaction
+      </ItemLink>
+      <ItemLink to={process.env.PUBLIC_URL + routes.TRIXTA_EXAMPLES_PAGE}>
+        Examples
       </ItemLink>
       <LoginButton />
     </Wrapper>
