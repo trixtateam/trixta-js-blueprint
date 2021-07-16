@@ -28,9 +28,13 @@ export type UseTrixtaExampleResponse = {
 
 export const useTrixtaExample = ({ debug = false }: UseTrixtaExampleProps) => {
   const [debugMode, setDebugMode] = useState(debug);
-  const [selectedRoleName, setRole] = useState();
-  const [selectedActionName, setSelectedAction] = useState();
-  const [selectedReactionName, setSelectedReaction] = useState();
+  const [selectedRoleName, setRole] = useState<string | undefined>();
+  const [selectedActionName, setSelectedAction] = useState<
+    string | undefined
+  >();
+  const [selectedReactionName, setSelectedReaction] = useState<
+    string | undefined
+  >();
 
   const selectTrixtaRoles: any = useMemo(makeSelectTrixtaAgentDetails, []);
   const roles = useSelector<{ trixta: TrixtaState }, string[]>(state =>
@@ -40,8 +44,8 @@ export const useTrixtaExample = ({ debug = false }: UseTrixtaExampleProps) => {
   const actions = useSelector<{ trixta: TrixtaState }, TrixtaAction[]>(state =>
     selectTrixtaActions(state, { roleName: selectedRoleName }),
   );
-  const actionList = actions
-    ? Object.keys(actions).map(action => actions[action].common.name)
+  const actionList: string[] = actions
+    ? Object.keys(actions).map<string>(action => actions[action].common.name)
     : [];
   const selectTrixtaReactions: any = useMemo(
     makeSelectTrixtaReactionsForRole,
@@ -50,8 +54,10 @@ export const useTrixtaExample = ({ debug = false }: UseTrixtaExampleProps) => {
   const reactions = useSelector<{ trixta: TrixtaState }, TrixtaReaction[]>(
     state => selectTrixtaReactions(state, { roleName: selectedRoleName }),
   );
-  const reactionList = reactions
-    ? Object.keys(reactions).map(reaction => reactions[reaction].common.name)
+  const reactionList: string[] = reactions
+    ? Object.keys(reactions).map<string>(
+        reaction => reactions[reaction].common.name,
+      )
     : [];
 
   return {

@@ -11,6 +11,8 @@ import { useTrixtaExample } from '../../../hooks/useTrixtaExample';
 import { PageWrapper } from '../../components/PageWrapper';
 import { TrixtaNavBar } from '../../components/TrixtaNavBar';
 import { DebugModeSwitch } from '../TrixtaPage/DebugModeSwitch';
+import { TrixtaReactionExample } from './components/TrixtaReactionExample';
+import { TrixtaReactionHookExample } from './components/TrixtaReactionHookExample';
 import { messages } from './messages';
 
 interface Props {}
@@ -38,8 +40,22 @@ export function TrixtaReactionPage(props: Props) {
       <TrixtaNavBar />
       <PageWrapper>
         <DebugModeSwitch debugMode={debugMode} setDebugMode={setDebugMode} />
-        {selectedReactionName}
-        {selectedRoleName}
+        {/* //TODO dropdown {selectedRoleName} drop */}
+        {/* //TODO dropdown {selectedReactionName} drop */}
+        {selectedRoleName && selectedReactionName && (
+          <TrixtaReactionExample
+            roleName={selectedRoleName}
+            reactionName={selectedReactionName}
+            debugMode={debugMode}
+          />
+        )}
+        {selectedRoleName && selectedReactionName && (
+          <TrixtaReactionHookExample
+            roleName={selectedRoleName}
+            reactionName={selectedReactionName}
+            debugMode={debugMode}
+          />
+        )}
       </PageWrapper>
     </>
   );
