@@ -15,7 +15,8 @@ import styled from 'styled-components/macro';
 import { Button } from '../../../Button';
 import { JsonViewer } from '../../../JsonViewer';
 import { LoadingIndicator } from '../../../LoadingIndicator';
-import { Title } from '../../../Title/Title';
+import { ExampleTitle } from '../ExampleTitle';
+import { InvalidExampleMessage } from '../InvalidExampleMessage';
 
 interface Props extends TrixtaReactionBaseProps {
   debugMode: boolean;
@@ -27,11 +28,11 @@ export const TrixtaReactionExample = memo((props: Props) => {
   const { roleName, debugMode, reactionName, requestForEffect } = props;
 
   if (!roleName || !reactionName)
-    return <Title>Please select a role and reaction</Title>;
+    return <InvalidExampleMessage type={'reaction'} />;
 
   return (
     <>
-      <Title>Component Example</Title>
+      <ExampleTitle name={reactionName} type={'component'} />
       <Button
         onClick={() => clearTrixtaReactionResponse({ roleName, reactionName })}
       >

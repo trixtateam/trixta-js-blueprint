@@ -10,7 +10,8 @@ import styled from 'styled-components/macro';
 import { Button } from '../../../Button';
 import { JsonViewer } from '../../../JsonViewer';
 import { LoadingIndicator } from '../../../LoadingIndicator';
-import { Title } from '../../../Title/Title';
+import { ExampleTitle } from '../ExampleTitle';
+import { InvalidExampleMessage } from '../InvalidExampleMessage';
 
 interface Props extends TrixtaActionBaseProps {
   debugMode: boolean;
@@ -28,11 +29,11 @@ export const TrixtaActionHookExample = memo((props: Props) => {
     loading,
   } = useTrixtaAction({ roleName, actionName, options: { debugMode } });
   if (!roleName || !actionName)
-    return <Title>Please select a role and action</Title>;
+    return <InvalidExampleMessage type={'action'} />;
 
   return (
     <>
-      <Title>Using Hook Example</Title>
+      <ExampleTitle name={actionName} type={'hook'} />
       <Button onClick={() => clearActionResponses()}>Clear Response</Button>
       <Div>
         <Div>
