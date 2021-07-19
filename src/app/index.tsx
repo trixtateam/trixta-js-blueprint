@@ -12,16 +12,11 @@ import { useTranslation } from 'react-i18next';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { SagaInjectionModes, useInjectSaga } from 'redux-injectors';
 import { routes } from '../constants/routes';
-import TrixtaRoles from '../constants/TrixtaRole';
 import { GlobalStyle } from '../styles/global-styles';
-import ProtectedRoute from './components/Route/components/ProtectedRoute';
 import { HomePage } from './pages/HomePage/Loadable';
 import { LoginPage } from './pages/LoginPage/Loadable';
 import { NotFoundPage } from './pages/NotFoundPage/Loadable';
-import { TrixtaActionPage } from './pages/TrixtaActionPage/Loadable';
-import { TrixtaExamplesPage } from './pages/TrixtaExamplesPage/Loadable';
 import { TrixtaPage } from './pages/TrixtaPage/Loadable';
-import { TrixtaReactionPage } from './pages/TrixtaReactionPage/Loadable';
 import saga from './saga';
 
 export function App() {
@@ -39,23 +34,7 @@ export function App() {
       <Switch>
         <Route exact path={routes.HOME_PAGE} component={HomePage} />
         <Route exact path={routes.AUTH_PAGE} component={LoginPage} />
-        <Route exact path={routes.TRIXTA_PAGE} component={TrixtaPage} />
-        <Route
-          exact
-          path={routes.TRIXTA_ACTION_PAGE}
-          component={TrixtaActionPage}
-        />
-        <ProtectedRoute
-          exact
-          roles={[TrixtaRoles.EXAMPLES]}
-          path={routes.TRIXTA_EXAMPLES_PAGE}
-          component={TrixtaExamplesPage}
-        />
-        <Route
-          exact
-          path={routes.TRIXTA_REACTION_PAGE}
-          component={TrixtaReactionPage}
-        />
+        <Route path={routes.TRIXTA_PAGE} component={TrixtaPage} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
