@@ -37,35 +37,23 @@ export function App() {
         <meta name="description" content="A React Boilerplate application" />
       </Helmet>
       <Switch>
+        <Route exact path={routes.HOME_PAGE} component={HomePage} />
+        <Route exact path={routes.AUTH_PAGE} component={LoginPage} />
+        <Route exact path={routes.TRIXTA_PAGE} component={TrixtaPage} />
         <Route
           exact
-          path={process.env.PUBLIC_URL + routes.HOME_PAGE}
-          component={HomePage}
-        />
-        <Route
-          exact
-          path={process.env.PUBLIC_URL + routes.AUTH_PAGE}
-          component={LoginPage}
-        />
-        <Route
-          exact
-          path={process.env.PUBLIC_URL + routes.TRIXTA_PAGE}
-          component={TrixtaPage}
-        />
-        <Route
-          exact
-          path={process.env.PUBLIC_URL + routes.TRIXTA_ACTION_PAGE}
+          path={routes.TRIXTA_ACTION_PAGE}
           component={TrixtaActionPage}
         />
         <ProtectedRoute
           exact
           roles={[TrixtaRoles.EXAMPLES]}
-          path={process.env.PUBLIC_URL + routes.TRIXTA_EXAMPLES_PAGE}
+          path={routes.TRIXTA_EXAMPLES_PAGE}
           component={TrixtaExamplesPage}
         />
         <Route
           exact
-          path={process.env.PUBLIC_URL + routes.TRIXTA_REACTION_PAGE}
+          path={routes.TRIXTA_REACTION_PAGE}
           component={TrixtaReactionPage}
         />
         <Route component={NotFoundPage} />

@@ -5,6 +5,7 @@ import { Link } from 'app/components/Link';
 import { NavBar } from 'app/components/NavBar';
 import { Helmet } from 'react-helmet-async';
 import { StyleConstants } from 'styles/StyleConstants';
+import { routes } from '../../../constants/routes';
 
 export function NotFoundPage() {
   return (
@@ -23,7 +24,7 @@ export function NotFoundPage() {
           4
         </Title>
         <P>Page not found.</P>
-        <Link to={process.env.PUBLIC_URL + '/'}>Return to Home Page</Link>
+        <Link to={routes.HOME_PAGE}>Return to Home Page</Link>
       </Wrapper>
     </>
   );

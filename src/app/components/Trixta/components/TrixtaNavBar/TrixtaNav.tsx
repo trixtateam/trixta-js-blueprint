@@ -26,16 +26,10 @@ export function Nav() {
         <GithubIcon />
         Github
       </Item>
-      <ItemLink to={process.env.PUBLIC_URL + routes.HOME_PAGE}>Home</ItemLink>
-      <ItemLink to={process.env.PUBLIC_URL + routes.TRIXTA_ACTION_PAGE}>
-        Action
-      </ItemLink>
-      <ItemLink to={process.env.PUBLIC_URL + routes.TRIXTA_REACTION_PAGE}>
-        Reaction
-      </ItemLink>
-      <ItemLink to={process.env.PUBLIC_URL + routes.TRIXTA_EXAMPLES_PAGE}>
-        Examples
-      </ItemLink>
+      <ItemLink to={routes.HOME_PAGE}>Home</ItemLink>
+      <ItemLink to={routes.TRIXTA_ACTION_PAGE}>Action</ItemLink>
+      <ItemLink to={routes.TRIXTA_REACTION_PAGE}>Reaction</ItemLink>
+      <ItemLink to={routes.TRIXTA_EXAMPLES_PAGE}>Examples</ItemLink>
       <LoginButton />
     </Wrapper>
   );

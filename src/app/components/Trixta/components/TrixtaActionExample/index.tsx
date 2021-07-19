@@ -9,7 +9,7 @@ import {
   TrixtaActionComponent,
   TrixtaActionComponentArgs,
   TrixtaActionResponseComponent,
-  TrixtaActionResponseComponentArgs
+  TrixtaActionResponseComponentArgs,
 } from '@trixta/trixta-js';
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';

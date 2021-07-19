@@ -7,7 +7,7 @@ import {
   clearTrixtaReactionResponse,
   TrixtaReactionBaseProps,
   TrixtaReactionComponent,
-  TrixtaReactionComponentArgs
+  TrixtaReactionComponentArgs,
 } from '@trixta/trixta-js';
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';

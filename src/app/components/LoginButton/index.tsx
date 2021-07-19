@@ -19,9 +19,7 @@ export function LoginButton() {
   if (isAuthenticated) {
     return <ItemDiv onClick={logout}>Logout</ItemDiv>;
   }
-  return (
-    <ItemLink to={process.env.PUBLIC_URL + routes.AUTH_PAGE}>Login</ItemLink>
-  );
+  return <ItemLink to={routes.AUTH_PAGE}>Login</ItemLink>;
 }
 
 const ItemDiv = styled.div`

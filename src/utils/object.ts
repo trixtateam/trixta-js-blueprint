@@ -23,7 +23,6 @@ export function omit<
   return result as TReturn;
 }
 
-
 /**
  *  Get object value
  */
@@ -67,15 +66,15 @@ export function conformsTo<T>(
 // eslint-disable-next-line no-unused-vars
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export function pickBy(
-    object: Record<string, unknown>,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    predicate = (value: unknown, key: string) => value,
-  ) {
-    if (object === null) return {};
-    return (
-      Object.entries(object)
-        // eslint-disable-next-line no-unused-vars
-        .filter(([key, value]) => predicate(value, key))
-        .reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {})
-    );
-  }
+  object: Record<string, unknown>,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  predicate = (value: unknown, key: string) => value,
+) {
+  if (object === null) return {};
+  return (
+    Object.entries(object)
+      // eslint-disable-next-line no-unused-vars
+      .filter(([key, value]) => predicate(value, key))
+      .reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {})
+  );
+}

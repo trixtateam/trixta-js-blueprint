@@ -33,7 +33,6 @@ import {
   useTrixtaReaction,
 } from '@trixta/trixta-js';
 
-
 interface Props {}
 
 export function TrixtaExamplesPage(props: Props) {
@@ -49,8 +48,12 @@ export function TrixtaExamplesPage(props: Props) {
     submitTrixtaAction,
     response,
     loading,
-  } = useTrixtaAction({ roleName: 'examples', actionName: 'request_for_effect_action', options: { debugMode } });
-  
+  } = useTrixtaAction({
+    roleName: 'examples',
+    actionName: 'request_for_effect_action',
+    options: { debugMode },
+  });
+
   const {
     clearReactionResponses,
     isInProgress: reactionIsInProgress,
@@ -78,23 +81,31 @@ export function TrixtaExamplesPage(props: Props) {
       <PageWrapper>
         <DebugModeSwitch debugMode={debugMode} setDebugMode={setDebugMode} />
 
-        <div style={{
-          display: "grid",
-          gridTemplateAreas: "'action_one reaction_one' 'hr hr' 'action_two reaction_two'",
-          fontSize: "10px",
-          gridTemplateColumns: "45% 45%"
-        }}>
-          <div style={{
-            gridArea: "action_one",
-            margin: "10px",
-            padding: "10px",
-            backgroundColor: "#dce6ea"
-          }}>
-            <h3>Action that runs a flow which has a reaction in it. Because it is for effect (does not wait for any response), the flow ends.</h3>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateAreas:
+              "'action_one reaction_one' 'hr hr' 'action_two reaction_two'",
+            fontSize: '10px',
+            gridTemplateColumns: '45% 45%',
+          }}
+        >
+          <div
+            style={{
+              gridArea: 'action_one',
+              margin: '10px',
+              padding: '10px',
+              backgroundColor: '#dce6ea',
+            }}
+          >
+            <h3>
+              Action that runs a flow which has a reaction in it. Because it is
+              for effect (does not wait for any response), the flow ends.
+            </h3>
             <TrixtaActionComponent
-              roleName='examples'
+              roleName="examples"
               debugMode={debugMode}
-              actionName='request_for_effect_action'
+              actionName="request_for_effect_action"
             >
               {({
                 submit,
@@ -115,10 +126,12 @@ export function TrixtaExamplesPage(props: Props) {
               Submit
             </Button>
           </div>
-          <div style={{
-            gridArea: "reaction_one",
-            margin: "10px"
-          }}>
+          <div
+            style={{
+              gridArea: 'reaction_one',
+              margin: '10px',
+            }}
+          >
             <h3>Reaction which is a request for effect, i.e. no response</h3>
             <TrixtaReactionComponent
               roleName="examples"
@@ -143,27 +156,37 @@ export function TrixtaExamplesPage(props: Props) {
             </TrixtaReactionComponent>
             <h3>Hook alternative</h3>
             {initialData && <JsonViewer data={initialData} />}
-            {(reactionIsInProgress || reactionLoading) && <LoadingIndicator small />}
+            {(reactionIsInProgress || reactionLoading) && (
+              <LoadingIndicator small />
+            )}
             <Button onClick={() => submitTrixtaReaction({ data: {} })}>
               Submit
             </Button>
           </div>
-          <div style={{
-            gridArea: "hr"
-          }}>
+          <div
+            style={{
+              gridArea: 'hr',
+            }}
+          >
             <hr />
           </div>
-          <div style={{
-            gridArea: "action_two",
-            margin: "10px",
-            padding: "10px",
-            backgroundColor: "#e9eadc"
-          }}>
-            <h3>Action that runs a flow which has two reactions in it, first reaction waits for a reply and then is fired again. After the second reply the flow ends</h3>
+          <div
+            style={{
+              gridArea: 'action_two',
+              margin: '10px',
+              padding: '10px',
+              backgroundColor: '#e9eadc',
+            }}
+          >
+            <h3>
+              Action that runs a flow which has two reactions in it, first
+              reaction waits for a reply and then is fired again. After the
+              second reply the flow ends
+            </h3>
             <TrixtaActionComponent
-              roleName='examples'
+              roleName="examples"
               debugMode={debugMode}
-              actionName='request_for_reponse_action'
+              actionName="request_for_reponse_action"
             >
               {({
                 submit,
@@ -178,12 +201,16 @@ export function TrixtaExamplesPage(props: Props) {
               )}
             </TrixtaActionComponent>
           </div>
-          <div style={{
-            gridArea: "reaction_two",
-            margin: "10px"
-          }}>
-
-            <h3>Reaction which is a request for response, i.e. user is requested to reply</h3>
+          <div
+            style={{
+              gridArea: 'reaction_two',
+              margin: '10px',
+            }}
+          >
+            <h3>
+              Reaction which is a request for response, i.e. user is requested
+              to reply
+            </h3>
             <TrixtaReactionComponent
               roleName="examples"
               debugMode={debugMode}
@@ -207,7 +234,7 @@ export function TrixtaExamplesPage(props: Props) {
             </TrixtaReactionComponent>
           </div>
         </div>
-        </PageWrapper>
+      </PageWrapper>
     </>
   );
 }

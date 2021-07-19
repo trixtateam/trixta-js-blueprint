@@ -20,6 +20,7 @@ import { ReactComponent as CodeAnalysisIcon } from './assets/code-analysis.svg';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'app/components/Link';
 import { messages } from '../messages';
+import { routes } from '../../../../constants/routes';
 
 export function Features() {
   const { t } = useTranslation();
@@ -101,9 +102,8 @@ export function Features() {
               {t(messages.routingDescription())}
               <br />
               <small>
-                Go to our{' '}
-                <Link to={process.env.PUBLIC_URL + '/notfound'}>/NotFound</Link>{' '}
-                page to see how routing works
+                Go to our <Link to={routes.NOT_FOUND_PAGE}>/NotFound</Link> page
+                to see how routing works
               </small>
             </P>
           </Content>

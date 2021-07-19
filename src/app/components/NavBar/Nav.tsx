@@ -33,11 +33,7 @@ export function Nav() {
         <GithubIcon />
         Github
       </Item>
-      {isAuthenticated && (
-        <ItemLink to={process.env.PUBLIC_URL + routes.TRIXTA_PAGE}>
-          Trixta
-        </ItemLink>
-      )}
+      {isAuthenticated && <ItemLink to={routes.TRIXTA_PAGE}>Trixta</ItemLink>}
       <LoginButton />
     </Wrapper>
   );

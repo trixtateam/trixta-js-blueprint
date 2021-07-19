@@ -8,7 +8,6 @@ export const routes = {
   NOT_FOUND_PAGE: '/404',
   AUTH_PAGE: '/auth',
 };
-
 // links (without variables)
 export const links = {
   NOT_FOUND_PAGE: '/404',
