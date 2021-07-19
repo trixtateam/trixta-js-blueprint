@@ -1,19 +1,16 @@
 {
   "files": {
-    "main.js": "/trixta-js-blueprint/static/js/main.bccf9d8b.chunk.js",
-    "runtime-main.js": "/trixta-js-blueprint/static/js/runtime-main.86393194.js",
+    "main.js": "/trixta-js-blueprint/static/js/main.c85da73d.chunk.js",
+    "runtime-main.js": "/trixta-js-blueprint/static/js/runtime-main.f65e0803.js",
     "static/css/2.e6924ae7.chunk.css": "/trixta-js-blueprint/static/css/2.e6924ae7.chunk.css",
-    "static/js/2.0ed939bb.chunk.js": "/trixta-js-blueprint/static/js/2.0ed939bb.chunk.js",
-    "static/js/3.e3b5d6e8.chunk.js": "/trixta-js-blueprint/static/js/3.e3b5d6e8.chunk.js",
-    "static/js/4.2c388f71.chunk.js": "/trixta-js-blueprint/static/js/4.2c388f71.chunk.js",
-    "static/js/5.743fe0ed.chunk.js": "/trixta-js-blueprint/static/js/5.743fe0ed.chunk.js",
-    "static/js/6.ba8deec0.chunk.js": "/trixta-js-blueprint/static/js/6.ba8deec0.chunk.js",
-    "static/js/7.06d6524a.chunk.js": "/trixta-js-blueprint/static/js/7.06d6524a.chunk.js",
-    "static/js/8.a341ad96.chunk.js": "/trixta-js-blueprint/static/js/8.a341ad96.chunk.js",
-    "static/js/9.027197d2.chunk.js": "/trixta-js-blueprint/static/js/9.027197d2.chunk.js",
-    "static/js/10.be65b6d3.chunk.js": "/trixta-js-blueprint/static/js/10.be65b6d3.chunk.js",
+    "static/js/2.58136454.chunk.js": "/trixta-js-blueprint/static/js/2.58136454.chunk.js",
+    "static/js/3.222eafec.chunk.js": "/trixta-js-blueprint/static/js/3.222eafec.chunk.js",
+    "static/js/4.b117ee17.chunk.js": "/trixta-js-blueprint/static/js/4.b117ee17.chunk.js",
+    "static/js/5.bcfd505f.chunk.js": "/trixta-js-blueprint/static/js/5.bcfd505f.chunk.js",
+    "static/js/6.09f57043.chunk.js": "/trixta-js-blueprint/static/js/6.09f57043.chunk.js",
+    "static/js/7.7466779a.chunk.js": "/trixta-js-blueprint/static/js/7.7466779a.chunk.js",
     "index.html": "/trixta-js-blueprint/index.html",
-    "static/js/2.0ed939bb.chunk.js.LICENSE.txt": "/trixta-js-blueprint/static/js/2.0ed939bb.chunk.js.LICENSE.txt",
+    "static/js/2.58136454.chunk.js.LICENSE.txt": "/trixta-js-blueprint/static/js/2.58136454.chunk.js.LICENSE.txt",
     "static/media/code-analysis.141f7683.svg": "/trixta-js-blueprint/static/media/code-analysis.141f7683.svg",
     "static/media/cra-logo.9d1c1f39.svg": "/trixta-js-blueprint/static/media/cra-logo.9d1c1f39.svg",
     "static/media/css.a5d1ce5d.svg": "/trixta-js-blueprint/static/media/css.a5d1ce5d.svg",
@@ -32,9 +29,9 @@
     "static/media/ts.523ed1bd.svg": "/trixta-js-blueprint/static/media/ts.523ed1bd.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.86393194.js",
+    "static/js/runtime-main.f65e0803.js",
     "static/css/2.e6924ae7.chunk.css",
-    "static/js/2.0ed939bb.chunk.js",
-    "static/js/main.bccf9d8b.chunk.js"
+    "static/js/2.58136454.chunk.js",
+    "static/js/main.c85da73d.chunk.js"
   ]
 }
