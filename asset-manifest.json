@@ -1,12 +1,12 @@
 {
   "files": {
     "main.js": "/trixta-js-blueprint/static/js/main.c85da73d.chunk.js",
-    "runtime-main.js": "/trixta-js-blueprint/static/js/runtime-main.f65e0803.js",
+    "runtime-main.js": "/trixta-js-blueprint/static/js/runtime-main.002b5df9.js",
     "static/css/2.e6924ae7.chunk.css": "/trixta-js-blueprint/static/css/2.e6924ae7.chunk.css",
     "static/js/2.58136454.chunk.js": "/trixta-js-blueprint/static/js/2.58136454.chunk.js",
     "static/js/3.222eafec.chunk.js": "/trixta-js-blueprint/static/js/3.222eafec.chunk.js",
     "static/js/4.b117ee17.chunk.js": "/trixta-js-blueprint/static/js/4.b117ee17.chunk.js",
-    "static/js/5.bcfd505f.chunk.js": "/trixta-js-blueprint/static/js/5.bcfd505f.chunk.js",
+    "static/js/5.859d1128.chunk.js": "/trixta-js-blueprint/static/js/5.859d1128.chunk.js",
     "static/js/6.09f57043.chunk.js": "/trixta-js-blueprint/static/js/6.09f57043.chunk.js",
     "static/js/7.7466779a.chunk.js": "/trixta-js-blueprint/static/js/7.7466779a.chunk.js",
     "index.html": "/trixta-js-blueprint/index.html",
@@ -29,7 +29,7 @@
     "static/media/ts.523ed1bd.svg": "/trixta-js-blueprint/static/media/ts.523ed1bd.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f65e0803.js",
+    "static/js/runtime-main.002b5df9.js",
     "static/css/2.e6924ae7.chunk.css",
     "static/js/2.58136454.chunk.js",
     "static/js/main.c85da73d.chunk.js"
