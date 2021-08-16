@@ -186,7 +186,7 @@ export function TrixtaExamplesPage(props: Props) {
             <TrixtaActionComponent
               roleName="examples"
               debugMode={debugMode}
-              actionName="request_for_reponse_action"
+              actionName="request_for_response_action"
             >
               {({
                 submit,
